@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "haha-stream"
+    }
+  },
+  "defaultProject": "haha-stream",
+  "cli": {
+    "analytics": "723acb53-122d-4e28-b3cd-486e5af91089"
+  }
 }
