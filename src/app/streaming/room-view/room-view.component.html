@@ -1,7 +1,3 @@
-
-
-
-
 <div id="container">
   <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">WebRTC samples</a>
     <span>Peer connection</span></h1>
@@ -12,13 +8,13 @@
     the connection is also available (unified-plan, plan-b or default).
   </p>
 
-  <video id="localVideo" #selfView playsinline autoplay muted></video>
-  <video id="remoteVideo" #remoteView playsinline autoplay></video>
+  <video #selfView autoplay id="localVideo" muted playsinline></video>
+  <video #remoteView autoplay id="remoteVideo" playsinline></video>
 
   <div class="box">
-    <button id="startButton" [disabled]="startButtonDisabled" (click)="start()">Start</button>
-    <button id="callButton" [disabled]="callButtonDisabled" (click)="call()">Call</button>
-    <button id="hangupButton" [disabled]="hangUpButtonDisabled" (click)="hangUp()">Hang Up</button>
+    <button (click)="start()" [disabled]="startButtonDisabled" id="startButton">Start</button>
+    <button (click)="call()" [disabled]="callButtonDisabled" id="callButton">Call</button>
+    <button (click)="hangUp()" [disabled]="hangUpButtonDisabled" id="hangupButton">Hang Up</button>
   </div>
 
   <div class="box">
@@ -40,7 +36,7 @@
 
 
   <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/pc1"
-     title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+     id="viewSource" title="View source for this page on GitHub">View source on GitHub</a>
 
 </div>
-<div id="remoteVideosContainer" #container></div>
+<div #container id="remoteVideosContainer"></div>
